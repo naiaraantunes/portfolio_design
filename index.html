@@ -19,7 +19,7 @@
     <!--FIM BOOTSTRAP ICONS-->
     <link rel="stylesheet" href="style.css" />
 
-    <!--Slick Carousel-->
+    <!--SLICK CAROUSELS-->
     <link
       rel="stylesheet"
       type="text/css"
@@ -38,7 +38,7 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-    <!--Fim Slick Carousel-->
+    <!--SLICK CAROUSELS-->
     <script src="menu.js" defer></script>
 
     <title>Naiara Antunes</title>
@@ -111,8 +111,8 @@
               </h1>
 
               <div class="btn-contato">
-                <a href="https://www.behance.net/Naiaratunes">
-                  <button>Meu Behance</button>
+                <a href="#pj">
+                  <button>Meu Portfólio</button>
                 </a>
               </div>
             </div>
@@ -238,27 +238,23 @@
             >
               <div class="overlay">Projeto 3</div>
             </div>
+
             <div
               class="img-port"
-              style="background-image: url(images/projeto.03.jpg)"
-              onclick="openModal('modal3')"
+              style="background-image: url(images/projeto\ faculdade.png)"
+              onclick="openModal('modal4')"
             >
-              <div class="overlay">Projeto 3</div>
+              <div class="overlay">Projeto Faculdade</div>
             </div>
+            
             <div
               class="img-port"
-              style="background-image: url(images/projeto.03.jpg)"
-              onclick="openModal('modal3')"
+              style="background-image: url(images/pj.kv.vestibular.png)"
+              onclick="openModal('modal5')"
             >
-              <div class="overlay">Projeto 3</div>
+              <div class="overlay">Projeto Vestibular</div>
             </div>
-            <div
-              class="img-port"
-              style="background-image: url(images/projeto.03.jpg)"
-              onclick="openModal('modal3')"
-            >
-              <div class="overlay">Projeto 3</div>
-            </div>
+            
           </div>
           <!-- carrossel -->
         </div>
@@ -297,6 +293,28 @@
         <div class="modal-content">
           <img src="images/projeto.03.jpg" alt="Projeto 3" />
           <p>Descrição do Projeto 3...</p>
+        </div>
+      </div>
+
+      <div id="modal4" class="modal">
+        <div class="modal-header">
+          <h2>Projeto Faculdade</h2>
+          <button class="close-btn" onclick="closeModal('modal4')">×</button>
+        </div>
+        <div class="modal-content">
+          <img src="images/projeto faculdade.png" alt="Projeto Faculdade" />
+          <p>Descrição do Projeto Faculdade...</p>
+        </div>
+      </div>
+
+      <div id="modal5" class="modal">
+        <div class="modal-header">
+          <h2>Projeto Faculdade</h2>
+          <button class="close-btn" onclick="closeModal('modal5')">×</button>
+        </div>
+        <div class="modal-content">
+          <img src="images/pj.kv.vestibular.png" alt="Projeto Vestibular" />
+          <p>Descrição do Projeto Vestibular...</p>
         </div>
       </div>
       <!-- Fim Modal -->
