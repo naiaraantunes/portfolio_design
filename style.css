@@ -25,7 +25,7 @@ body {
   font-size: 16px;
   font-weight: 600;
   background-color: #572758;
-  color: #ffffff; /*cor da fonte do botão */
+  color: #ffffff;
   border: 0;
   border-radius: 32px;
   cursor: pointer;
@@ -55,8 +55,8 @@ header .logo {
 }
 
 header .logo img {
-  width: 56px; /* Defina o tamanho desejado */
-  height: auto; /* Mantém a proporção da imagem */
+  width: 56px;
+  height: auto;
 }
 
 header > .interface {
@@ -179,11 +179,10 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site .img-topo-site img {
-  width: 360px; /* Ajuste a largura desejada */
-  height: auto; /* Mantém a proporção da imagem */
-  border-radius: 32px; /* Exemplo: deixa os cantos arredondados */
-  box-shadow: 0px 4px 10px rgba(87, 39, 88, 0.5); /* Sombra com a cor #572758 e 50% de opacidade */
-  position: relative;
+  width: 360px;
+  height: auto;
+  border-radius: 32px;
+  box-shadow: 0px 4px 10px rgba(87, 39, 88, 0.5);
   animation: flutuar 2s ease-in-out infinite alternate;
 }
 
@@ -260,10 +259,10 @@ section.sobre .flex {
 }
 
 .sobre .img-sobre img {
-  width: 360px; /* Ajuste a largura desejada */
-  height: auto; /* Mantém a proporção da imagem */
-  border-radius: 32px; /* Exemplo: deixa os cantos arredondados */
-  box-shadow: 0px 4px 10px rgba(87, 39, 88, 0.5); /* Sombra com a cor #572758 e 50% de opacidade */
+  width: 360px;
+  height: auto;
+  border-radius: 32px;
+  box-shadow: 0px 4px 10px rgba(87, 39, 88, 0.5);
 }
 
 .sobre .txt-sobre {
@@ -277,7 +276,7 @@ section.sobre .flex {
 }
 
 .sobre .txt-sobre h2 span {
-  display: block; /* Passa a escrita para linha de baixo */
+  display: block;
 }
 
 .sobre .txt-sobre p {
@@ -303,20 +302,18 @@ section.sobre .flex {
 
 /* ESTILO DO PORTFÓLIO */
 
-section.portfolio {
-  padding: 120px 4%;
-}
-
-section.portfolio .flex {
-  justify-content: space-around;
-  margin-top: 60px;
+/* Carrossel */
+.carrossel {
+  display: flex;
+  margin-top: 2rem;
 }
 
 .img-port {
   width: 360px;
   height: 460px;
   background-size: cover;
-  background-position: 100% 0%;
+  background-position: center;
+  margin-right: 20px;
   transition: 0.8s;
   cursor: pointer;
   border-radius: 32px;
@@ -328,11 +325,11 @@ section.portfolio .flex {
 }
 
 .overlay {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 30rem;
   background-color: #4a3f555b;
   border-color: 32px;
   border-radius: 32px;
@@ -348,6 +345,57 @@ section.portfolio .flex {
 
 .overlay:hover {
   opacity: 1;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.modal-content {
+  padding: 20px;
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.modal img {
+  width: 100%;
+  height: auto;
+}
+
+.close-btn {
+  font-size: 1.5rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+section.portfolio {
+  padding: 120px 4%;
+}
+
+section.portfolio .flex {
+  justify-content: space-around;
+  margin-top: 60px;
 }
 
 /* ESTILO FORMULARIO */
@@ -432,8 +480,8 @@ footer .line-footer p a {
 }
 
 footer .logo-footer img {
-  width: 56px; /* Defina o tamanho desejado */
-  height: auto; /* Mantém a proporção da imagem */
+  width: 56px;
+  height: auto;
 }
 
 /* RESPONSIVO */
@@ -472,7 +520,6 @@ footer .logo-footer img {
 
   .seta-icone {
     margin-top: 40px;
-    /* display: none; (Para esconder a item no responsivo */
   }
 
   /* ESTILO DAS HABILIDADES */
@@ -494,7 +541,7 @@ footer .logo-footer img {
   }
 
   .sobre .txt-sobre h2 {
-    line-height: 30px; /* Altura entre linhas */
+    line-height: 30px;
   }
 
   /* ESTILO DO PORTFÓLIO */
@@ -537,18 +584,18 @@ footer .logo-footer img {
   }
 }
 
-/* Nova sessão rolagem */
+/* Novo item Ferramentas */
 
 .ferramentas {
   text-align: center;
-  background-color: #FDF0FF;
+  background-color: #fdf0ff;
   padding: 40px 4%;
   position: relative;
 }
 
 .ferramentas-wrapper {
   overflow: hidden;
-  max-width: 80%; /* Limita a largura visível da seção */
+  max-width: 80%;
   margin: 0 auto;
   position: relative;
   margin-top: 40px;
@@ -557,10 +604,8 @@ footer .logo-footer img {
 .ferramentas-container {
   display: flex;
   gap: 24px;
-  animation: slide 20s linear infinite; /* Animação de slide contínuo */
-  width: calc(
-    64px * 16 + 16px * 16
-  ); /* Largura total para 16 itens com espaçamento */
+  animation: slide 20s linear infinite;
+  width: calc(64px * 16 + 16px * 16);
 }
 
 .ferramenta-item {
@@ -591,13 +636,11 @@ footer .logo-footer img {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(
-      calc(-100% / 2)
-    ); /* Move a lista pela metade para repetir o loop */
+    transform: translateX(calc(-100% / 2));
   }
 }
 
-/* Efeito de gradiente nas bordas para opacidade nas laterais */
+/* Gradiente nas bordas para opacidade nas laterais */
 .ferramentas-wrapper:before,
 .ferramentas-wrapper:after {
   content: "";
